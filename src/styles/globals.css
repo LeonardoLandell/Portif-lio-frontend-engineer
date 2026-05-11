@@ -1,0 +1,68 @@
+@import "./reset.css";
+@import "./variables.css";
+
+body {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 163, 196, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(circle at center, rgba(0, 89, 110, 0.18), transparent 45%),
+    linear-gradient(120deg, #041018 0%, #02050b 55%, #000000 100%);
+
+  color: var(--text-primary);
+
+  font-family: Inter, sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* TEXTURA CINEMATOGRÁFICA */
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.18;
+
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.08) 0.5px,
+    transparent 0.5px
+  );
+
+  background-size: 4px 4px;
+
+  mix-blend-mode: soft-light;
+}
+
+/* VINHETA PROFUNDA */
+body::after {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle,
+    transparent 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}

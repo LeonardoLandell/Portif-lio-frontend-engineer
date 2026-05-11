@@ -1,0 +1,100 @@
+.modules {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-bottom: 72px;
+}
+
+.moduleCard {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 0 22px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  backdrop-filter: blur(14px);
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.01em;
+
+  transition: all 0.32s ease;
+}
+
+.moduleCard::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 183, 216, 0.12),
+    transparent 70%
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+.moduleCard:hover::before {
+  opacity: 1;
+}
+
+.moduleCard:hover {
+  transform: translateY(-3px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  color: rgba(255, 255, 255, 0.96);
+
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 768px) {
+  .modules {
+    gap: 12px;
+
+    margin-bottom: 56px;
+  }
+
+  .moduleCard {
+    min-height: 46px;
+
+    padding: 0 18px;
+
+    border-radius: 16px;
+
+    font-size: 12px;
+  }
+}

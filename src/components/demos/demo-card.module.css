@@ -1,0 +1,174 @@
+.card {
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 0.96),
+    rgba(10, 10, 10, 0.98)
+  );
+
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+}
+
+.thumbnail {
+  position: relative;
+
+  width: 100%;
+  height: 280px;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.content {
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.category {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.title {
+  font-size: 34px;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.05em;
+}
+
+.status {
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  white-space: nowrap;
+}
+
+.description {
+  color: var(--text-secondary);
+
+  line-height: 1.85;
+
+  margin-bottom: 30px;
+}
+
+.actions {
+  display: flex;
+
+  gap: 14px;
+}
+
+.primaryButton,
+.secondaryButton {
+  height: 48px;
+
+  padding: 0 18px;
+
+  border-radius: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+
+  transition: var(--transition);
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #00a6c7, #00d4ff);
+
+  color: white;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(135deg, #2f2f2f, #1b1b1b);
+}
+
+.secondaryButton {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .thumbnail {
+    height: 220px;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

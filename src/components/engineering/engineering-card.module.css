@@ -1,0 +1,175 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 360px;
+
+  padding: 34px;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  transition: all 0.35s ease;
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 183, 216, 0.14),
+    transparent 58%
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: linear-gradient(
+    180deg,
+    rgba(22, 22, 22, 0.96),
+    rgba(8, 8, 8, 0.98)
+  );
+
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.42);
+}
+
+.header {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.arrow {
+  color: rgba(255, 255, 255, 0.38);
+
+  transition: all 0.3s ease;
+}
+
+.card:hover .arrow {
+  transform: translate(3px, -3px);
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.content {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1;
+}
+
+.projectLabel {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.title {
+  max-width: 320px;
+
+  font-size: 42px;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.07em;
+
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 320px;
+
+  color: var(--text-secondary);
+
+  line-height: 1.9;
+
+  white-space: pre-line;
+}
+
+.stack {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 38px;
+}
+
+.tag {
+  padding: 10px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.74);
+}

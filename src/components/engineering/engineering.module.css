@@ -1,0 +1,96 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 320px;
+
+  padding: 30px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  transition: var(--transition);
+}
+
+.card:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 0.96),
+    rgba(12, 12, 12, 0.98)
+  );
+
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.category {
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-size: 36px;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+
+  margin-bottom: 20px;
+}
+
+.description {
+  color: var(--text-secondary);
+
+  line-height: 1.85;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 32px;
+}
+
+.tag {
+  padding: 9px 13px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.72);
+}
